@@ -17,7 +17,14 @@
     <div id="app" class="page-shell">
       <header class="hero card">
         <div>
-          <span class="hero-badge">Vue 3 + VXE-Table + CDN</span>
+          <span class="hero-badge">
+            <span class="neon-icon neon-icon-sm">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l2.7 6.3L21 11l-6.3 2.7L12 20l-2.7-6.3L3 11l6.3-2.7L12 2z"></path>
+              </svg>
+            </span>
+            Vue 3 + VXE-Table + CDN
+          </span>
           <h1>10 萬筆假資料表格 Demo</h1>
           <p class="hero-text">
             單頁靜態網站示範。使用虛擬滾動顯示 100,000 筆員工資料，支援關鍵字搜尋、篩選、排序與重新產生資料。
@@ -34,19 +41,55 @@
 
       <section class="stats-grid">
         <article class="stat-card card">
-          <span>總資料筆數</span>
+          <div class="stat-head">
+            <span class="neon-icon neon-cyan">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 18h16M6 14l3-4 3 2 4-6 2 3"></path>
+                <circle cx="6" cy="14" r="1.2"></circle>
+                <circle cx="9" cy="10" r="1.2"></circle>
+                <circle cx="12" cy="12" r="1.2"></circle>
+                <circle cx="16" cy="6" r="1.2"></circle>
+                <circle cx="18" cy="9" r="1.2"></circle>
+              </svg>
+            </span>
+            <span>總資料筆數</span>
+          </div>
           <strong>{{ formatNumber(tableData.length) }}</strong>
         </article>
         <article class="stat-card card">
-          <span>篩選後筆數</span>
+          <div class="stat-head">
+            <span class="neon-icon neon-purple">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M12 5v14"></path>
+                <path d="M7.5 7.5h9v9h-9z"></path>
+              </svg>
+            </span>
+            <span>篩選後筆數</span>
+          </div>
           <strong>{{ formatNumber(filteredData.length) }}</strong>
         </article>
         <article class="stat-card card">
-          <span>欄位數量</span>
+          <div class="stat-head">
+            <span class="neon-icon neon-pink">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7.5h16M4 12h16M4 16.5h16"></path>
+                <path d="M8 5v14M16 5v14"></path>
+              </svg>
+            </span>
+            <span>欄位數量</span>
+          </div>
           <strong>{{ columns.length }}</strong>
         </article>
         <article class="stat-card card">
-          <span>資料生成耗時</span>
+          <div class="stat-head">
+            <span class="neon-icon neon-mix">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="7"></circle>
+                <path d="M12 8v4l3 2"></path>
+              </svg>
+            </span>
+            <span>資料生成耗時</span>
+          </div>
           <strong>{{ generationMs }} ms</strong>
         </article>
       </section>
@@ -54,7 +97,16 @@
       <section class="content-grid">
         <aside class="panel card">
           <div class="panel-head">
-            <h2>資料篩選</h2>
+            <div class="title-with-icon">
+              <span class="neon-icon neon-cyan">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 7h16"></path>
+                  <path d="M7 12h10"></path>
+                  <path d="M10 17h4"></path>
+                </svg>
+              </span>
+              <h2>資料篩選</h2>
+            </div>
             <p>用假資料模擬大型後台列表。</p>
           </div>
 
@@ -121,7 +173,17 @@
         <main class="table-panel card">
           <div class="table-toolbar">
             <div>
-              <h2>員工資料表</h2>
+              <div class="title-with-icon">
+                <span class="neon-icon neon-purple">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6.5h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 17.5h16"></path>
+                    <path d="M8 4v16"></path>
+                  </svg>
+                </span>
+                <h2>員工資料表</h2>
+              </div>
               <p>
                 目前顯示 {{ formatNumber(filteredData.length) }} / {{ formatNumber(tableData.length) }} 筆資料
               </p>
